@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(to bottom,rgb(32, 24, 146),rgb(154, 55, 55));
+    padding: 10px;
+}
+
+.container{
+    border: 2px solid rgb(75, 73, 73);
+    display: grid;
+    grid-template-columns: 1 minmax(150px,1fr);
+    gap: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    min-width: 150px;
+    width:600px;
+    max-width: 600px;
+    height: max-content;
+}
+
+.container :is(.text-input, .qr-code, .button-group){
+    width: 100%;
+}
+
+.text-input{
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.text-input > h3{
+    margin-bottom: 10px;
+}
+
+.text-input > input{
+    padding: 3px 5px 0 10px;
+    box-shadow: inset 0.8px 0.8px 0.2px 0.2px rgb(184, 182, 182),-0.8px -0.8px 0.2px 0.2px rgb(184, 182, 182);
+    border: 1px solid rgba(29, 28, 28, 0.57);
+    width: 100%;
+    height: 50px;
+    overflow: scroll;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+}
+
+.qr-code{
+    padding: 10px;
+    background-color: white;
+}
+
+.qr-code > img{
+    width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+    background-color: transparent;
+    object-fit: contain;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+}
+
+.button-group > button{
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius:10px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
+}
+
+.button-group > button:hover{
+    background-color: rgb(126, 118, 118);
+    color: white;
+}
+
+input:focus{
+    border: 1px solid gray;
+    outline: none;
+}
+
+
